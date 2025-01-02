@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+
+  <meta charset="utf-8">
+  <title>Vega Checkout</title>
+
+  <meta name="author" content="Vega Checkout">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="icon" type="image/png" href="http://localhost:4000/img/favicon.png" sizes="16x16"> -->
+	<link rel="stylesheet" href="/css/main.css">
+
+<!--   <meta property="og:title" content="Vega Checkout">
+  <meta property="og:description" content="Checkout de alta conversão para negócios digitais. Acesse grátis as ferramentas que você precisa para vender mais na internet.">
+  <meta property="og:image" content="/img/social.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property='og:url' content="/">
+
+  <meta name="twitter:title" content="Vega Checkout">
+  <meta name="twitter:description" content="Checkout de alta conversão para negócios digitais. Acesse grátis as ferramentas que você precisa para vender mais na internet.">
+  <meta name="twitter:image" content="/img/social.jpg">
+  <meta name="twitter:card" content="summary_large_image"> -->
+
+  <!-- <link rel="canonical" href="http://localhost:4000/"> -->
+  <link rel="canonical" href="http://localhost:4000/">
+  
+
+</head>
+
+
+	<body>
+
+		<div class="app">
+			<header class="header">
+  <svg width="296" height="257" viewBox="0 0 296 257" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
+    <path d="M74.4938 128.525L128.59 74.4905L0.746094 0.789734L74.4938 128.525Z" fill="#2C2C2C"/>
+    <path d="M295.996 0.649597L148.332 256.411L74.5 128.53L295.996 0.649597Z" fill="#FFB727"/>
+  </svg>
+
+  <button type="button" class="bt_menu magic-hover" title="Menu">
+    <svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="16" y="22.123" width="28" height="4.877" rx="2.438" fill="#2C2C2C"/>
+      <rect x="18" y="33" width="24" height="4.877" rx="2.438" fill="#2C2C2C"/>
+    </svg>
+  </button>
+
+  <a href="https://admin.vegacheckout.com.br/register" title="Comece grátis" target="_blank" class="signup magic-hover"><span>Comece grátis</span></a>
+
+</header>
+
+			<div class="preloader">
+	<i class="v"><svg viewBox="0 0 296 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M74.4938 128.525L128.59 74.4905L0.746094 0.789734L74.4938 128.525Z" fill="#EFE3CD"/>
+		<path d="M295.996 0.649597L148.332 256.411L74.5 128.53L295.996 0.649597Z" fill="#FFB727"/>
+	</svg></i>
+	<svg class="ellipse" width="1841" height="1596" viewBox="0 0 1841 1596" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path class="orbit_intro" d="M1607.62 1206.95C1544.63 1312.88 1410.94 1363.77 1244.84 1359.72C1078.83 1355.67 881.041 1296.69 690.905 1183.62C500.769 1070.55 354.503 924.926 271.671 781.001C188.795 636.997 169.678 495.23 232.667 389.309C295.655 283.387 429.344 232.49 595.444 236.545C761.454 240.598 959.247 299.574 1149.38 412.643C1339.52 525.711 1485.79 671.337 1568.62 815.263C1651.49 959.267 1670.61 1101.03 1607.62 1206.95Z" stroke="#2C2C2C" stroke-width="5"/>
+		<circle class="ball1_intro" cx="858" cy="1268" r="21" fill="#2C2C2C"/>
+		<circle class="ball2_intro" cx="295" cy="318" r="9.5" fill="#EFE3CD" stroke="#2C2C2C" stroke-width="5"/>
+	</svg>
+
+	<div id="progress-bar-container">
+		<div id="progress-bar">0%</div>
+	</div>
+</div>
+
+<main id="main" class="main">
+
+	<section class="cover" id="cover">
+		<div class="lang">
+			<a href="/" title="Português" class="bt_pt current">PT</a>
+			<a href="/en" title="English" class="bt_en magic-hover">EN</a>
+		</div>
+
+		<button type="button" title="Login" class="login magic-hover">
+			<i></i><span>Login</span>
+		</button>
+
+		<i class="v hover-this">
+			<span>
+			<svg viewBox="0 0 296 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M74.4938 128.525L128.59 74.4905L0.746094 0.789734L74.4938 128.525Z" fill="#EFE3CD"/>
+			<path d="M295.996 0.649597L148.332 256.411L74.5 128.53L295.996 0.649597Z" fill="#FFB727"/>
+			</svg>
+			</span>
+		</i>
+
+		<i class="radial">
+			<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<path
+				id="circlePath"
+				d="
+				M 10, 50
+				a 40,40 0 1,1 80,0
+				40,40 0 1,1 -80,0
+				"
+				/>
+			<text>
+				<textPath href="#circlePath">
+				Conversão média acima de 90% •&nbsp;
+				</textPath>
+			</text>
+			</svg>
+		</i>
+
+		<hgroup>
+			<h1>Vega Checkout</h1>
+			<h2>Os recursos que você precisa para <em>vender mais</em> na internet</h2>
+		</hgroup>
+
+		<form id="signup" class="access" name="signup" method="get" action="https://admin.vegacheckout.com.br/register">
+			<input type="email" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="signup_email" name="email" required autocomplete="off">
+			<label for="signup_email">Comece <b>grátis</b>, digite seu e-mail</label>
+			<button type="submit" title="Criar conta" name="submit" class="magic-hover"></button>
+		</form>
+
+		<div class="log">
+			<a href="https://admin.vegacheckout.com.br/login" class="magic-hover" target="_blank" title="Entrar"><i></i>Entrar</a>
+			<a href="https://nova.vegacheckout.com.br" class="magic-hover" target="_blank" title="Sistema legado">Sistema legado<i></i></a>
+		</div>
+	</section>
+
+	<div class="checkout_slides">
+		<ul>
+			<li class="electronic"></li>
+			<li class="moka"></li>
+			<li class="next"></li>
+		</ul>
+		<ul>
+			<li class="gameover"></li>
+			<li class="imagine"></li>
+			<li class="bycicle"></li>
+		</ul>
+	</div>
+
+	<section class="audience" id="audience">
+		<ul>
+			<li class="audience_card active" onmouseenter="expandAudienceCard(event)">
+				<h2>Para vender <b>produtos físicos</b></h2>
+				<figure></figure>
+			</li>
+			<li class="audience_card" onmouseenter="expandAudienceCard(event)">
+				<h2>Para vender <b>produtos digitais</b></h2>
+				<figure></figure>
+			</li>
+			<li class="audience_card" onmouseenter="expandAudienceCard(event)">
+				<h2>Para vender <b>dropshipping</b></h2>
+				<figure></figure>
+			</li>
+		</ul>
+		<svg class="ellipse" width="1841" height="1596" viewBox="0 0 1841 1596" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="orbit" d="M1607.62 1206.95C1544.63 1312.88 1410.94 1363.77 1244.84 1359.72C1078.83 1355.67 881.041 1296.69 690.905 1183.62C500.769 1070.55 354.503 924.926 271.671 781.001C188.795 636.997 169.678 495.23 232.667 389.309C295.655 283.387 429.344 232.49 595.444 236.545C761.454 240.598 959.247 299.574 1149.38 412.643C1339.52 525.711 1485.79 671.337 1568.62 815.263C1651.49 959.267 1670.61 1101.03 1607.62 1206.95Z" stroke="#2C2C2C" stroke-width="5"/>
+			<circle class="ball1" cx="858" cy="1268" r="21" fill="#2C2C2C"/>
+			<circle class="ball2" cx="295" cy="318" r="9.5" fill="#EFE3CD" stroke="#2C2C2C" stroke-width="5"/>
+		</svg>
+	</section>
+
+	<div class="about" id="about">
+		<p class="p1">Maximize suas vendas com uma experiência de</p>
+		<p class="p2">compra única e de alta performance.</p>
+		<p class="p3">Use o Vega na sua loja Shopify, Woo e outros apps</p>
+		<p class="p4">de e-commerce.</p>
+
+		<span class="planet"></span>
+		<span class="cometa"></span>
+		<footer>
+			<button type="button">
+				<p>Também integra com landing page e atende quem vende pelas redes sociais ;)</p>
+			</button>
+			<span></span>
+			<span></span>
+		</footer>
+	</div>
+
+	<div class="iframe_checkout desk">
+		<iframe src="https://checkout.ecoveste.com.br/VCCL1O8SB9A2" title="Vega Checkout"></iframe>
+		<div class="controls">
+			<ul>
+				<li>
+					<button
+						type="button"
+						class="bt_tab bt_desk magic-hover active"
+						title="Desktop"
+						onclick="iframeTabControls(event); iframeDesk();"><i></i></button>
+				</li>
+				<li>
+					<button 
+						type="button" 
+						class="bt_tab bt_mobile magic-hover" 
+						title="Mobile"
+						onclick="iframeTabControls(event); iframeMob();"><i></i></button>
+				</li>
+			</ul>
+			<button type="button" class="bt_full magic-hover" title="Tela cheia" onclick="iframeFull();"><i></i></button>
+		</div>
+		<p>
+			Checkout <mark>transparente</mark> customizado com a cara do seu negócio
+			<button type="button">
+				<p>Não há nada que identifique o Vega no seu checkout ;)</p>
+			</button>
+		</p>
+		<button type="button" class="bt_minimize magic-hover" title="Minimizar" onclick="iframeDesk();"></button>
+	</div>
+
+	<section class="checkout_itens">
+		<h2>Explore os itens que ajudam a aumentar o seu ticket médio</h2>
+		<ul>
+			<li
+				data-hover-title="Upsell one-click"
+				data-hover-sub="Ofertas pós venda"
+				data-hover-img="img_1"
+				><h3>Upsell one-click</h3><i></i></li>
+			<li 
+				data-hover-title="Order Bump"
+				data-hover-sub="Ofertas pré venda"
+				data-hover-img="img_2"
+				><h3>Order Bump</h3><i></i></li>
+			<li
+				data-hover-title="Variantes de produto"
+				data-hover-sub="Seleção de modelos"
+				data-hover-img="img_3"
+				><h3>Variantes de produto</h3><i></i></li>
+			<li
+				data-hover-title="Controle de estoque"
+				data-hover-sub="Limite de itens disponíveis"
+				data-hover-img="img_4"
+				><h3>Controle de estoque</h3><i></i></li>
+			<li
+				data-hover-title="Banner/gif animado/video"
+				data-hover-sub="Imagem ou video promocional"
+				data-hover-img="img_5"
+				><h3>Banner/gif animado/video</h3><i></i></li>
+			<li
+				data-hover-title="Cupom"
+				data-hover-sub="Desconto por código ou valor"
+				data-hover-img="img_6"
+				><h3>Cupom</h3><i></i></li>
+			<li
+				data-hover-title="Letreiro"
+				data-hover-sub="Frase em destaque"
+				data-hover-img="img_7"
+				><h3>Letreiro</h3><i></i></li>
+			<li
+				data-hover-title="Contador de vendas"
+				data-hover-sub="Número de compradores"
+				data-hover-img="img_8"
+				><h3>Contador de vendas</h3><i></i></li>
+			<li
+				data-hover-title="Prova social"
+				data-hover-sub="Comentário de compradores"
+				data-hover-img="img_9"
+				><h3>Prova social</h3><i></i></li>
+			<li
+				data-hover-title="Pagamento com 2 cartões"
+				data-hover-sub="Permite 2 cartões na compra"
+				data-hover-img="img_10"
+				><h3>Pagamento com 2 cartões</h3><i></i></li>
+			<li
+				data-hover-title="Temporizador"
+				data-hover-sub="Cria urgência de compra"
+				data-hover-img="img_11"
+				><h3>Temporizador</h3><i></i></li>
+		</ul>
+
+		<div class="popup">
+			<small></small>
+			<p></p>
+			<span></span>
+		</div>
+	</section>
+
+	<section class="recover">
+
+		<svg class="recover_fly" width="1209" height="580" viewBox="0 0 1209 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="flypath" d="M60.0365 364.86C60.0365 364.86 15.2783 268.359 96.5344 177.86C218.513 42.0059 92.2759 -4.14134 64.7773 77.3585C43.3551 140.849 282.277 303.358 411.777 157.858C462.777 88.8584 381.497 43.3109 332.277 71.8584C286.277 95.3584 216.567 240.434 459.277 277.858C679.777 311.858 869.63 194.662 979.777 226.858C1077.28 255.358 1079.63 332.358 1013.28 386.858C946.93 441.358 813.127 441.819 830.777 364.86C843.277 310.358 974.134 262.232 1086.78 364.86C1131.78 405.858 1153.28 471.858 1160.78 532.858"/>
+			<g class="fly">
+ 				<path fill-rule="evenodd" clip-rule="evenodd" d="M5.47934 32.7577C5.31375 31.6709 5.29961 30.567 5.43733 29.4772C5.85681 26.4001 7.48306 23.6173 9.96043 21.7373C12.4378 19.8574 15.5647 19.0332 18.6574 19.4451L30.5126 20.899C32.0457 21.0984 33.5252 21.5964 34.8667 22.3647C36.2082 23.133 37.3855 24.1565 38.3312 25.3767C39.277 26.597 39.9727 27.9901 40.3787 29.4766C40.7847 30.9631 40.893 32.5137 40.6975 34.0401C40.5019 35.5665 40.0064 37.0386 39.239 38.3725C38.4717 39.7064 37.4476 40.8759 36.2253 41.8143C35.003 42.7526 33.6064 43.4414 32.1152 43.8414C30.6241 44.2413 29.0675 44.3446 27.5345 44.1452L15.6653 42.6026C13.1293 42.2788 10.7649 41.1438 8.92793 39.3683C7.09097 37.5929 5.88074 35.273 5.47934 32.7577Z" fill="#2C2C2C"/>
+				<path d="M20.5717 51.8354C24.0217 48.5107 26.9676 42.2124 24.4029 38.8822C21.8383 35.5521 14.9477 36.6977 10.8489 39.1411C4.88531 42.7054 1.18503 51.0441 3.84039 54.4875C6.49575 57.9308 15.5674 56.6329 20.5717 51.8354Z" fill="#FFB727"/>
+				<path d="M25.6111 11.2871C28.0793 15.3947 29.3747 22.2423 26.0773 24.7991C22.78 27.3559 16.4027 24.4642 13.0393 21.0384C8.15711 16.0655 6.70228 7.04497 10.1308 4.39545C13.5594 1.74593 21.9847 5.37743 25.6111 11.2871Z" fill="#FFB727"/>
+				<path d="M1.34475 52.8399C1.19051 51.7583 1.2273 50.6587 1.45347 49.5909C2.58916 44.663 5.61801 40.3796 9.8916 37.6576C14.2762 35.0615 22.3483 33.3174 25.8049 37.8003C28.5276 41.3241 26.6987 46.9612 23.7012 50.9612C23.5591 51.1534 23.3803 51.3158 23.175 51.4391C22.9697 51.5623 22.742 51.644 22.5047 51.6795C22.2674 51.715 22.0254 51.7035 21.7923 51.6458C21.5592 51.5881 21.3396 51.4853 21.1462 51.3432C20.9527 51.2011 20.7891 51.0226 20.6648 50.8177C20.5404 50.6129 20.4577 50.3857 20.4214 50.1493C20.3851 49.9129 20.3958 49.6718 20.4531 49.4398C20.5103 49.2078 20.6129 48.9895 20.7549 48.7972C22.9972 46.0206 24.462 41.892 23.0118 39.9712C21.2924 37.7284 15.5006 38.5605 11.8338 40.738C8.37899 42.8997 5.90979 46.3197 4.95019 50.2723C4.793 50.7984 4.7449 51.3512 4.80881 51.8971C4.87271 52.443 5.04729 52.9705 5.32194 53.4478C6.5795 55.0712 11.4346 55.236 15.9856 52.8868C16.4103 52.6677 16.9055 52.6258 17.3623 52.7705C17.8191 52.9151 18.2 53.2343 18.4213 53.658C18.6425 54.0817 18.686 54.5751 18.5422 55.0296C18.3984 55.4841 18.079 55.8626 17.6543 56.0817C12.3988 58.7022 5.3 59.3349 2.45766 55.6296C1.85902 54.8061 1.47642 53.8471 1.34475 52.8399Z" fill="#2C2C2C"/>
+				<path d="M6.7366 12.3883C6.55655 11.2928 6.49789 10.1813 6.56166 9.07375C6.56267 8.01467 6.78835 6.96843 7.22392 6.00359C7.65948 5.03874 8.2951 4.17707 9.08912 3.47503C9.96885 2.88021 10.965 2.47697 12.0128 2.29154C13.0606 2.10611 14.1366 2.14266 15.1706 2.39881C20.1493 3.53385 24.4843 6.57625 27.2357 10.8665C29.8853 15.2006 31.7524 23.25 27.2675 26.715C22.7826 30.18 15.4128 26.4232 11.8353 22.7941C9.13206 19.9074 7.35623 16.2831 6.7366 12.3883ZM26.18 18.292C25.8763 16.3309 25.2023 14.4437 24.1939 12.7305C21.9839 9.30782 18.53 6.86817 14.5587 5.92464C14.0256 5.7736 13.4679 5.72952 12.9182 5.79496C12.3685 5.86041 11.8377 6.03407 11.3566 6.30586C10.9702 6.70443 10.6679 7.17617 10.4676 7.69334C10.2672 8.21051 10.1729 8.76266 10.19 9.31734C10.1184 13.3775 11.6459 17.309 14.4452 20.2699C17.3952 23.2687 22.8124 25.6173 25.059 23.9115C26.2888 22.9242 26.562 20.7214 26.18 18.292Z" fill="#2C2C2C"/>
+			</g>
+		</svg>
+		<div class="marquee">
+			<h2>
+				<span>Recupere em torno de 30% dos abandonos de carrinho</span>
+				<span>Recupere em torno de 30% dos abandonos de carrinho</span>
+				<span>Recupere em torno de 30% dos abandonos de carrinho</span>
+			</h2>
+		</div>
+		<hgroup>
+			<h3>Disparo <b>automático</b> de mensagens</h3>
+			<h4>Seus clientes recebem <b>mensagens condicionais</b> configuradas por você</h4>
+		</hgroup>
+		<footer>
+			<em>Via WhatsApp</em>
+			<em>Via E-mail</em>
+			<em>Via SMS</em>
+		</footer>
+	</section>
+
+	<div class="ab_test">
+		<em>Exclusivo</em>
+		<h2>Teste A/B</h2>
+		<article>
+			<span></span>
+			<footer>
+				<small>Teste A/B</small>
+				<h3>Gateways</h3>
+				<p>Os <b>pagamentos no cartão</b>  são  direcionados automaticamente para o <b>gateway</b> com a melhor conversão do momento entre o seu público.</p>
+			</footer>
+		</article>
+		<article>
+			<span></span>
+			<footer>
+				<small>Teste A/B</small>
+				<h3>PIX</h3>
+				<p>Personalize a experiência de pagamento no Pix com <b>modelos configuráveis</b>.</p>
+			</footer>
+		</article>
+		<article>
+			<span></span>
+			<footer>
+				<small>Teste A/B</small>
+				<h3>Checkout</h3>
+				<p>Experimente <b>diferentes configurações</b> de checkout e deixe que o Vega apresente o melhor para seus compradores.</p>
+			</footer>
+		</article>
+	</div>
+
+	<div class="features">
+		<article>
+			<hgroup>
+				<h2>Relatório<br />completo</h2>
+				<h3>Acompanhe o desempenho das suas <b>vendas</b> e <b>marketing</b> com dados detalhados</h3>
+			</hgroup>
+		</article>
+		<article>
+			<hgroup>
+				<h2>Gerencie múltiplos negócios</h2>
+				<h3>Com o Vega é possível acessar e administrar várias lojas online em uma única conta</h3>
+			</hgroup>
+		</article>
+	</div>
+
+	<!-- Tela do dashboard -->
+	<div class="report_screen">
+		<iframe src="https://embed.figma.com/proto/XN25DJKlIwrG68RNacZ7Ch/Iframe-dashboard-landingpage?page-id=0%3A1&node-id=1-8626&node-type=frame&viewport=312%2C252%2C0.4&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A8626&embed-host=share&hide-ui=1"></iframe>
+	</div>
+
+	<!-- Integrações -->
+	<div class="integrations">
+		<h2>O máximo de integrações</h2>
+
+		<article class="integ_card" onclick="expandIntegCard(event)">
+			<hgroup>
+				<h3>Apps</h3>
+				<h4>Recursos de e-commerce</h4>
+			</hgroup>
+			<div class="wrapper aplicativos" role="group" aria-label="Splide Basic HTML Example">
+				<div class="box shopify"></div>
+				<div class="box woo"></div>
+				<div class="box activecampaign"></div>
+				<div class="box notazz"></div>
+				<div class="box astron"></div>
+				<div class="box hotzapp"></div>
+			</div>
+		</article>
+
+		<article class="integ_card" onclick="expandIntegCard(event)">
+			<hgroup>
+				<h3>Gateways</h3>
+				<h4>Intermediadores de pagamento</h4>
+			</hgroup>
+			<div class="wrapper gateways" role="group" aria-label="Splide Basic HTML Example">
+				<div class="box appmax"></div>
+				<div class="box getnet"></div>
+				<div class="box iugu"></div>
+				<div class="box asaas"></div>
+				<div class="box mercado_pago"></div>
+				<div class="box pagarme"></div>
+				<div class="box abmex"></div>
+				<div class="box zoutipay"></div>
+				<div class="box melldin"></div>
+				<div class="box aktapay"></div>
+				<div class="box arkama"></div>
+				<div class="box ativopay"></div>
+				<div class="box avizz"></div>
+				<div class="box beehive"></div>
+				<div class="box cashtime"></div>
+				<div class="box cielo"></div>
+				<div class="box dompagamentos"></div>
+				<div class="box fastpay"></div>
+				<div class="box fenyxpay"></div>
+				<div class="box horizonbank"></div>
+				<div class="box nextionpay"></div>
+				<div class="box skypayments"></div>
+				<div class="box vibecash"></div>
+				<div class="box eskypay"></div>
+				<div class="box simplles"></div>
+				<div class="box bs-pay"></div>
+				<div class="box villetpay"></div>
+				<div class="box sttarpay"></div>
+			</div>
+		</article>
+
+		<article class="integ_card" onclick="expandIntegCard(event)">
+			<hgroup>
+				<h3>Pixels</h3>
+				<h4>Monitoramento de campanhas</h4>
+			</hgroup>
+			<div class="wrapper pixel" role="group" aria-label="Splide Basic HTML Example">
+				<div class="box facebook"></div>
+				<div class="box google"></div>
+				<div class="box analytics"></div>
+				<div class="box tiktok"></div>
+				<div class="box pinterest"></div>
+				<div class="box kwai"></div>
+				<div class="box taboola"></div>
+				<div class="box uol_ads"></div>
+				<div class="box outbrain"></div>
+			</div>
+		</article>
+	</div>
+
+
+	<!-- Planos -->
+	<div class="plans" id="pricing">
+		<h2>Planos</h2>
+		<div>
+			<article class="plan_card active" onmouseenter="expandPlanCard(event)">
+				<h3>Basic</h3>
+				<div>
+					<h4>R$ 0</h4>
+					<h5>Zero mensalidade</h5>
+					<h6><em>+ 2,5%</em> sobre transações</h6>
+					<ul>
+						<li>Customize o seu checkout</li>
+						<li>Monitore suas vendas em tempo real</li>
+						<li>Escale seu negócio na internet</li>
+					</ul>
+					<footer>
+						<a href="https://admin.vegacheckout.com.br/register" title="Comece agora" target="_blank" class="magic-hover"><span>Comece agora</span></a>
+					</footer>
+				</div>
+			</article>
+			<article class="plan_card" onmouseenter="expandPlanCard(event)">
+				<h3>Business</h3>
+				<div>
+					<h4>R$ 147</h4>
+					<h5>/mês</h5>
+					<h6><em>+ 2%</em> sobre transações</h6>
+					<ul>
+						<li>Customize o seu checkout</li>
+						<li>Monitore suas vendas em tempo real</li>
+						<li>Escale seu negócio na internet</li>
+					</ul>
+					<footer>
+						<a href="https://admin.vegacheckout.com.br/register" title="Comece agora" target="_blank" class="magic-hover"><span>Comece agora</span></a>
+					</footer>
+				</div>
+			</article>
+			<article class="plan_card" onmouseenter="expandPlanCard(event)">
+				<h3>Professional</h3>
+				<div>
+					<h4>R$ 497</h4>
+					<h5>/mês</h5>
+					<h6><em>+ 1,5%</em> sobre transações</h6>
+					<ul>
+						<li>Customize o seu checkout</li>
+						<li>Monitore suas vendas em tempo real</li>
+						<li>Escale seu negócio na internet</li>
+					</ul>
+					<footer>
+						<a href="https://admin.vegacheckout.com.br/register" title="Comece agora" target="_blank" class="magic-hover"><span>Comece agora</span></a>
+					</footer>
+				</div>
+			</article>
+			<footer>
+				<p><b>Personalizamos o seu plano</b> se o seu negócio  já está escalado</p>
+				<button type="button" class="button magic-hover" title="Solicite um orçamento" role="link"
+					onclick="javascript:window.open('https://api.whatsapp.com/send?phone=551135007861&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20checkout%20Vega', '_blank');">
+					<span>Solicite um orçamento</span>
+				</button>
+			</footer>
+		</div>
+	</div>
+
+	<!-- Video das placas -->
+	<div class="rewards">
+		<div>
+			<video id="vid" muted playsinline autoplay loop>
+			<!-- <video id="vid" controls preload> -->
+				<source src="img/placas.webm" type="video/webm">
+			</video>
+			<footer>
+				<p>Colecione placas exclusivas alcançando metas de faturamento</p>
+			</footer>
+		</div>
+	</div>
+
+</main>
+			
+<nav class="menu">
+	<div class="lang">
+		<a href="/" title="Português" class="bt_pt current">PT</a>
+		<a href="/en" title="English" class="bt_en magic-hover">EN</a>
+	</div>
+
+	<ul>
+		<li><a href="#cover" class="magic-hover" title="Início" onclick="closeMenu()">Início</a></li>
+		<li><a href="#audience" class="magic-hover" title="Sobre" onclick="closeMenu()">Sobre</a></li>
+		<li><a href="#pricing" class="magic-hover" title="Planos" onclick="closeMenu()">Planos</a></li>
+		<li><a href="#contact" class="magic-hover" title="Contato" onclick="closeMenu()">Contato</a></li>
+	</ul>
+
+	<div class="log">
+		<small>Acesso</small>
+		<a href="https://admin.vegacheckout.com.br/login" class="magic-hover" target="_blank" title="Entrar"><i></i>Entrar</a>
+		<a href="https://nova.vegacheckout.com.br" class="magic-hover" target="_blank" title="Acessar sistema legado">Acessar sistema legado<i></i></a>
+	</div>
+
+	<div class="sign">
+		<small>Nova conta</small>
+		<a href="https://admin.vegacheckout.com.br/register" class="magic-hover" target="_blank" title="Comece grátis"><span>Comece grátis</span></a>
+	</div>
+</nav>
+			
+<!-- Contato -->
+<footer class="footer" id="contact">
+	<h2>Contato</h2>
+
+	<div>
+		<address>
+			<h3>Comercial</h3>
+			<div>
+				<h4>(11)<hr>3500<hr>7861</h4>
+				<a href="https://api.whatsapp.com/send?phone=551135007861&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20checkout%20Vega" title="WhatsApp web" target="_blank" class="magic-hover">
+					WhatsApp web
+				</a>
+				<i></i>
+				<p>Dias úteis, 9h às 18h</p>
+			</div>
+		</address>
+		<address>
+			<h3>Suporte</h3>
+			<div>
+				<h4>800<hr>591<hr>8746</h4>
+				<a  href="https://api.whatsapp.com/send?phone=558005918746&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20checkout%20Vega" title="WhatsApp web" target="_blank" class="magic-hover">
+					WhatsApp web
+				</a>
+				<i></i>
+				<p>Dias úteis, 9h às 18h</p>
+			</div>
+		</address>
+		<aside>
+			<address>
+				<h3>Ouvidoria</h3>
+				<div>
+					<h4>ouvidoria@vegacheckout.com.br</h4>
+					<p>Manifeste opiniões, reclamações ou dúvidas.</p>
+					<a href="mailto:ouvidoria@vegacheckout.com.br" title="Enviar e-mail" target="_blank" class="magic-hover">Enviar e-mail</a>
+				</div>
+			</address>
+			<!-- Redes -->
+			<footer>
+				<ul class="social">
+					<li><a class="instagram magic-hover" 
+						href="https://www.instagram.com/vegacheckout/"
+						title="Instagram Vega"
+						target="_blank">
+						</a>
+					</li>
+					<li><a class="facebook magic-hover" 
+						href="https://www.facebook.com/vegacheckout.com.br"
+						title="Facebook Vega"
+						target="_blank">
+						</a>
+					</li>
+					<li><a class="youtube magic-hover" 
+						href="https://www.youtube.com/@vegacheckout/videos"
+						title="YouTube Vega"
+						target="_blank">
+						</a>
+					</li>
+				</ul>
+				<small>&copy; 2025<br>Vega Checkout</small>
+			</footer>
+		</aside>
+	</div>
+	<a href="#cover" title="Top" class="magic-hover"><i></i></a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+<script src="http://localhost:4000/js/magicmouse.js"></script>
+<script src="http://localhost:4000/js/scripts.js"></script>
+
+
+
+		</div>
+
+	</body>
+
+</html>
