@@ -19,7 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 
-baseurl: "/landing-page-vega-25" # the subpath of your site, e.g. /blog
+baseurl: "/landing-page-vega-25"
+# baseurl: "/landing_vega_2025"
 url: "https://abrcoutinho.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
