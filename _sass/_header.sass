@@ -1,0 +1,98 @@
+.header
+	position: fixed
+	top: 3rem
+	left: 3rem
+	display: flex
+	align-items: center
+	background-color: var(--neutral_10)
+	border-radius: 4rem
+	z-index: 5
+	outline: solid .25rem var(--neutral_90)
+
+	.logo
+		width: 0
+		height: auto
+		margin: 0
+		opacity: 0
+		transition: width .3s $ease, margin .3s, opacity $ease .3s
+		&.visible
+			width: 3.5rem
+			height: auto
+			margin: 0 .5rem 0 1rem
+			opacity: 1
+			transition: width .6s $ease, margin .6s, opacity $ease 1.3s
+
+	.bt_menu
+		width: 5.25rem
+		height: 5.25rem
+		background-color: var(--neutral_10)
+		border-radius: 100%
+		padding: .375rem
+		box-sizing: border-box
+		transition: transform .2s $ease
+
+		&:hover
+			transition: transform .5s $ease
+			transform: scale(.9)
+
+		svg
+			border: solid .375rem var(--neutral_90)
+			background-color: var(--brand)
+			border-radius: 100%
+			transition: transform .4s $ease
+
+		rect
+			transition: width .6s, transform .3s $ease
+
+		&.active
+			svg
+				transform: rotate(180deg)
+			rect:first-of-type
+				transform: rotate(45deg) translate(.75rem, -1.5rem)
+			rect:nth-of-type(2)
+				width: 1.75rem
+				transform: rotate(-45deg) translate(-2rem, 0.4rem)
+
+	.signup
+		position: absolute
+		top: 50%
+		left: 110%
+		transform: translateY(-50%)
+		padding: .3rem
+		background-color: var(--neutral_10)
+		border-radius: 3rem
+		font-size: 1.1rem
+		font-weight: 700
+		display: inline-block
+		transition: opacity .3s $ease
+		opacity: 0
+		visibility: hidden
+
+		span
+			width: max-content
+			height: 2rem
+			border-radius: 2rem
+			line-height: 2rem
+			display: block
+			padding: 0 1.25rem
+			border: solid .3rem var(--neutral_90)
+			color: var(--neutral_90)
+			transition: background .4s $ease, padding .3s $ease
+			background: 
+				image: url("../img/icons/arrow.svg")
+				repeat: no-repeat
+				position: 140% 50%
+				size: auto 50%
+
+		&:hover
+			span
+				background-color: var(--brand)
+				background-position: 95% 50%
+				padding: 0 2.25rem 0 1.25rem
+
+		&.visible
+			opacity: 1
+			visibility: visible
+
+
+

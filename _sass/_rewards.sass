@@ -1,0 +1,73 @@
+
+.rewards
+	margin: 0 1.25rem
+
+	& > div
+		max-width: 100rem
+		height: max(60vw, 42.5rem)
+		box-sizing: border-box
+		margin: .25rem auto 0
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 4rem
+		background-color: var(--neutral_90)
+		position: relative
+		overflow: hidden
+
+		&::before
+			content: ''
+			width: 100%
+			height: 4rem
+			background: url("../img/badges.svg") no-repeat center
+				size: 50% auto
+			position: absolute
+			top: 1rem
+			left: 0
+			z-index: 1
+
+	video
+		width: 100%
+		min-height: 680px
+	footer
+		width: 100%
+		position: absolute
+		bottom: 0
+		left: 0
+		background: var(--neutral_90)
+		background: linear-gradient(0deg, rgba(44,44,44,0.700717787114846) 0%, rgba(0,0,0,0) 100%)
+		padding: 4rem 1.5rem
+		text-align: center
+		box-sizing: border-box
+		z-index: 1
+
+	p
+		font-weight: 600
+		max-width: 50rem
+		color: var(--neutral_10)
+		font-size: 2.5rem
+		margin: 0 auto
+
+
+
+@include for-size(tablet_md)
+	.rewards
+		& > div
+			height: 80vh
+			&::before
+				background-size: 80% auto
+		p
+			font-weight: 500
+			font-size: 4vw
+
+
+@include for-size(phone)
+	.rewards
+		& > div
+			height: 85vh
+		footer
+			padding: 2rem 1.5rem
+		p
+			font-size: 6vw
+
+

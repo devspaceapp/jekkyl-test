@@ -1,0 +1,282 @@
+
+.plans
+	margin: 0 1.25rem 10rem
+
+	h2
+		color: var(--neutral_90)
+		font-weight: 500
+		font-size: 4vw
+		margin: 0 6rem 3rem 6rem
+		position: relative
+		z-index: 1
+
+	& > div
+		max-width: 100rem
+		box-sizing: border-box
+		background:
+			color: var(--neutral_20)
+			image: url("../img/station.svg")
+			repeat: no-repeat
+			position: 3rem bottom
+			size: 85% auto
+		border-radius: 2.5rem
+		padding: .75rem 3.5rem
+		display: flex
+		gap: min(2.5vw, 2.5rem)
+		flex-wrap: wrap
+		align-items: flex-start
+		margin: 4rem auto 0
+		position: relative
+
+		// Antena
+		&::after
+			content: ''
+			width: 13rem
+			height: 13rem
+			background: url("../img/antena.svg") no-repeat center bottom
+				size: contain
+			position: absolute
+			top: -13rem
+			right: 8rem
+
+		.plan_card
+			flex: 1 1 0
+			background-color: var(--neutral_10)
+			border-radius: 3rem
+			outline: dashed 1px var(--neutral_90)
+			padding: .5rem
+			position: relative
+
+			div
+				border-radius: 2.5rem
+				padding: 2rem
+				border: solid 1px var(--neutral_90)
+				overflow: hidden
+				max-height: 7.5rem
+				transition: max-height .2s $ease .2s, background-color .4s $ease .1s, color .4s $ease .1s
+
+				footer
+					margin: 2rem 0 0
+					position: relative
+
+					&::after
+						content: ''
+						width: 1.5rem
+						height: 1.5rem
+						mask-image: url("../img/icons/arrow.svg")
+						mask-size: contain
+						background-color: var(--neutral_10)
+						position: absolute
+						top: 50%
+						right: 1rem
+						transform: translateY(-50%)
+				a
+					padding: .3rem
+					background-color: var(--neutral_10)
+					border-radius: 3rem
+					font-size: 1.1rem
+					font-weight: 700
+					display: inline-block
+					transition: transform .2s $ease
+					&:hover
+						transform: scale(1.05)
+						span
+							background-color: var(--brand)
+						
+					span
+						height: 2.5rem
+						border-radius: 2.5rem
+						line-height: 2.5rem
+						display: inline-block
+						padding: 0 1.25rem
+						border: solid .3rem var(--neutral_90)
+						color: var(--neutral_90)
+						transition: background-color .2s $ease
+						
+
+			// Splash
+			&::before,
+			&::after
+				content: ''
+				width: 7.5rem
+				height: 7.5rem
+				position: absolute
+				top: 4rem
+				right: 1rem
+				mask-repeat: no-repeat
+				mask-position: center
+				background-color: var(--neutral_90)
+				z-index: 1
+			&::before
+				mask-image: url("../img/splash.svg")
+				mask-size: contain
+				animation:
+					name: splash
+					duration: 10s
+					timing-function: linear
+					iteration-count: infinite
+			&::after
+				mask-image: url("../img/icons/hand-pointer.svg")
+				mask-size: 4rem auto
+
+			// Actived card
+			&.active
+				outline: solid .3rem var(--neutral_90)
+				&::before,
+				&::after
+					background-color: var(--neutral_10)
+					animation: none
+				div
+					background-color: var(--neutral_90)
+					color: var(--neutral_10)
+					max-height: 30rem
+					transition: max-height .2s ease-in, background-color .4s $ease, color .4s $ease
+
+			@keyframes splash
+				to
+					transform: rotate(359deg)
+
+		h3
+			font-size: 1.5rem
+			font-weight: 600
+			line-height: 2.5rem
+			text-transform: uppercase
+			margin-bottom: .5rem
+			padding: 0 2rem
+		h4
+			font-size: 2.5rem
+			font-weight: 600
+			line-height: 3rem
+		h5
+			font-size: 1.5rem
+			font-weight: 400
+		h6
+			font-size: 1.25rem
+			font-weight: 400
+			margin: 1.25rem 0
+			em
+				font-size: 1.75rem
+				font-weight: 600
+
+		li
+			font-size: 1.1rem
+			line-height: 1.25rem
+			padding-left: 2.4rem
+			margin-bottom: .75rem
+			background: url("../img/icons/fire.svg") no-repeat 0 center
+			// text-overflow: ellipsis
+			// white-space: nowrap
+
+		& > footer
+			flex: 0 0 100%
+			background-color: #efe3cdbf
+			border-radius: 4rem
+			outline: dashed 1px var(--neutral_90)
+			padding: 0 .75rem 0 2.5rem
+			height: 4rem
+			display: flex
+			justify-content: space-between
+			align-items: center
+			box-sizing: border-box
+
+			p
+				font-size: 1.1rem
+			b
+				font-weight: 600
+			button
+				font-weight: 600
+				height: 2.75rem
+				border: solid .3rem var(--neutral_90)
+				border-radius: 3rem
+				line-height: 2.25rem
+				padding: 0 1.25rem
+				opacity: .3
+				transition: opacity .4s $ease
+				overflow: hidden
+
+				&:hover
+					background-color: var(--neutral_90)
+					color: var(--neutral_10)
+
+			&:hover button
+				opacity: 1
+				
+
+
+@include for-size(tablet_lg)
+	.plans
+		& > div
+			padding: .75rem
+			border-radius: 3.5rem 3.5rem 2.5rem 2.5rem
+			gap: .75rem
+
+			.plan_card
+				div
+					padding: 1rem
+			h3
+				padding: 0 1rem
+				font-size: 2.2vw
+			h4
+				font-size: 3.5vw
+			h5
+				font-size: 2.2vw
+			h6
+				font-size: 1.8vw
+			li
+				font-size: 1.8vw
+
+
+@include for-size(tablet_md)
+	.plans
+		h2
+			margin: 0 5rem 0rem
+		& > div
+			padding: 0.75rem 5vw
+			margin: 2rem auto 0
+			.plan_card
+				box-sizing: border-box
+				flex: 0 0 100%
+			.plan_card
+				div
+					padding: 1rem 2rem
+			h3
+				padding: 0 2rem
+				font-size: 1.5rem
+			h4
+				font-size: 2.2rem
+			h5
+				font-size: 1.5rem
+			h6
+				margin: .8rem 0 1.25rem
+				font-size: 1.5rem
+			li
+				font-size: 1.1rem
+
+
+@include for-size(phone)
+	.plans
+		margin: 0 .5rem 10rem
+		h2
+			text-align: center
+			font-size: 12vw
+		& > div
+			padding: .75rem
+			background-position: 65% bottom
+			background-size: 290% auto
+			.plan_card
+				div
+					padding: 1rem 6vw
+			h3
+				padding: 0 6vw
+			h6
+				font-size: 4.5vw
+			& > footer
+				height: 6rem
+				border-radius: 2rem
+				padding: 0 .75rem 0 6vw
+				p
+					font-size: 4vw
+
+
+
+

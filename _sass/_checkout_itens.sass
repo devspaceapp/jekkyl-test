@@ -1,0 +1,271 @@
+
+.checkout_itens
+	padding: 0 1.25rem
+	position: relative
+
+	h2
+		position: absolute
+		font-size: 4.5rem
+		line-height: 4rem
+		width: 37.5rem
+		top: .5rem
+		left: 6rem
+		font-weight: 300
+
+	li
+		height: 4rem
+		padding-right: 6rem
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		gap: 2.4rem
+		box-sizing: border-box
+		position: relative
+
+		&:not(:last-child)
+			border-bottom: solid 2px var(--neutral_100)
+
+		&::before
+			content: ''
+			width: 100%
+			min-height: 0
+			background-color: var(--neutral_100)
+			position: absolute
+			top: 0
+			left: 0
+			transition: min-height .3s $ease
+
+		&:hover
+			color: var(--neutral_10)
+			i
+				background-color: var(--neutral_10)
+				opacity: 1
+			&::before
+				min-height: 4rem 
+
+
+	h3
+		line-height: 4rem
+		font-size: 1.75rem
+		font-weight: 600
+		text-align: right
+		position: relative
+		z-index: 1
+		transition: color .5s $ease
+	i
+		width: 2.5rem
+		height: 2.5rem
+		mask-image: url("../img/icons/info.svg")
+		mask-size: 2rem auto
+		mask-position: center
+		mask-repeat: no-repeat
+		background-color: var(--neutral_100)
+		opacity: .1
+		position: relative
+		z-index: 1
+		transition: opacity .5s $ease
+
+
+	.popup
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: var(--neutral_10)
+		border-radius: 1.75rem
+		outline: solid 2px var(--neutral_90)
+		padding: .75rem
+		z-index: 3
+		display: none
+
+		small
+			display: block
+			font-size: 1.25rem
+			line-height: 2rem
+			padding: 0 1.25rem
+			font-weight: 700
+		p
+			font-size: 2rem
+			line-height: 3.5rem
+			padding: 0 1.25rem
+			font-weight: 400
+		span
+			display: block
+			border-radius: 1.5rem
+			transition: width .4s $ease, min-height .2s $ease
+			min-height: 0
+			margin: 0 auto
+			background:
+				repeat: no-repeat
+				position: center
+				color: var(--neutral_20)
+				// size: contain
+
+			&[data-img="img_1"]
+				background-image: url("../img/checkout-itens/upsell.webp")
+				width: 26.625rem
+				min-height: 32.125rem
+			&[data-img="img_2"]
+				background-image: url("../img/checkout-itens/order-bump.webp")
+				width: 31.25rem
+				min-height: 34rem
+			&[data-img="img_3"]
+				background-image: url("../img/checkout-itens/variante-produto.webp")
+				width: 33.75rem
+				min-height: 33.5rem
+			&[data-img="img_4"]
+				background-image: url("../img/checkout-itens/controle-estoque.webp")
+				width: 32.75rem
+				min-height: 18.375rem
+			&[data-img="img_5"]
+				background-image: url("../img/checkout-itens/banner.gif")
+				width: 29.375rem
+				min-height: 20.75rem
+			&[data-img="img_6"]
+				background-image: url("../img/checkout-itens/cupom.webp")
+				width: 33.75rem
+				min-height: 17.5rem
+			&[data-img="img_7"]
+				background-image: url("../img/checkout-itens/letreiro.gif")
+				width: 19rem
+				min-height: 28.125rem
+			&[data-img="img_8"]
+				background-image: url("../img/checkout-itens/contador.webp")
+				width: 29.875rem
+				min-height: 14.5rem
+			&[data-img="img_9"]
+				background-image: url("../img/checkout-itens/prova-social.webp")
+				width: 35rem
+				min-height: 23.875rem
+			&[data-img="img_10"]
+				background-image: url("../img/checkout-itens/2-cartoes.webp")
+				width: 34rem
+				min-height: 11.188rem
+			&[data-img="img_11"]
+				background-image: url("../img/checkout-itens/cronometro.webp")
+				width: 36.875rem
+				min-height: 27.5rem
+
+
+
+@include for-size(tablet_lg)
+	.checkout_itens
+		padding: 0
+		h2
+			position: relative
+			top: initial
+			left: initial
+			font-size: 5vw
+			line-height: 5.5vw
+			text-align: center
+			width: 100%
+			padding: 0 5vw
+			box-sizing: border-box
+			margin-bottom: 3rem
+
+		ul
+			overflow-x: auto
+			width: 100%
+			display: flex
+			gap: 1rem
+			padding: .75rem 1.25rem
+			box-sizing: border-box
+			background-color: var(--neutral_20)
+
+			&::-webkit-scrollbar-thumb
+				border-radius: 1rem
+				border-right: 0
+				border-bottom: solid .25rem var(--neutral_20)
+
+		li
+			padding-right: 0
+			flex: 0 0 auto
+			height: 8rem
+			border-radius: 1rem
+			outline: solid 2px var(--neutral_90)
+			padding: 1rem
+			flex-direction: column
+			gap: 0
+			background-color: var(--neutral_10)
+			overflow: hidden
+
+			&:hover
+				&::before
+					min-height: 8rem
+		h3
+			font-size: 2rem
+
+		.popup
+			top: 110%
+			transform: translate(-50%, 0)
+			small
+				font-size: 3.5vw
+			p
+				font-size: 4vw
+				line-height: 4vw
+				padding: 1rem 1.25rem
+			span
+				&[data-img="img_5"]
+					width: 70vw
+					min-height: 49.5vw
+					background-size: 70vw auto
+
+
+@include for-size(tablet_md)
+	.checkout_itens
+		li
+			height: 6rem
+		h3
+			font-size: 3vw
+
+
+@include for-size(phone)
+	.checkout_itens
+		h2
+			font-size: 8vw
+			line-height: 8.5vw
+		h3
+			font-size: 4.5vw
+		.popup
+			small
+				font-size: 5vw
+			p
+				font-size: 6vw
+				line-height: 6vw
+			span
+				background-size: 100% auto
+				&[data-img="img_1"]
+					width: 85vw
+					min-height: 98vw
+				&[data-img="img_2"]
+					width: 85vw
+					min-height: 24rem
+				&[data-img="img_3"]
+					width: 85vw
+					min-height: 84vw
+				&[data-img="img_4"]
+					width: 85vw
+					min-height: 45vw
+				&[data-img="img_5"]
+					width: 85vw
+					min-height: 60vw
+					background-size: 100% auto
+				&[data-img="img_6"]
+					width: 85vw
+					min-height: 44vw
+				&[data-img="img_7"]
+					width: 85vw
+					min-height: 83vw
+				&[data-img="img_8"]
+					width: 85vw
+					min-height: 35vw
+				&[data-img="img_9"]
+					width: 85vw
+					min-height: 58vw
+				&[data-img="img_10"]
+					width: 85vw
+					min-height: 25vw
+				&[data-img="img_11"]
+					width: 85vw
+					min-height: 62vw
+

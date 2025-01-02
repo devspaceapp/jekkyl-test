@@ -1,0 +1,222 @@
+.menu
+	position: fixed
+	top: 1.25rem
+	left: -50%
+	width: 24rem
+	height: calc(100vh - 3rem)
+	min-height: 780px
+	box-sizing: border-box
+	padding: 8rem 3.5rem 0
+	z-index: 4
+	// background-color: var(--neutral_90)
+	// outline: solid .24rem var(--brand)
+	// border-radius: 4rem
+
+
+	&::before
+		content: ''
+		width: 60rem
+		height: 141rem
+		background: url("../img/menu_meteor.webp") no-repeat 0 0
+			size: contain
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -120%)
+
+	&.active
+		left: 11rem
+		transition: left 1.4s $ease
+		&::before
+			transition: transform 1.4s $ease
+			transform: translate(-50%, -50%)
+
+	& > *
+		z-index: 1
+
+	.lang
+		position: relative
+		display: inline-block
+
+		&::after
+			content: ''
+			width: 1px
+			height: 100%
+			background-color: var(--neutral_10)
+			opacity: .5
+			position: absolute
+			top: 0
+			left: 50%
+
+		a
+			color: var(--neutral_10)
+			font-weight: 600
+			font-size: 1.25rem
+			opacity: .5
+
+			&:hover
+				opacity: 1
+			&:first-child
+				margin-right: 1.5rem
+			&.current
+				opacity: 1
+
+	ul
+		margin: 1rem 0
+		position: relative
+		li
+			mar
+		a
+			font-size: 2rem
+			line-height: 3.5rem
+			font-weight: 200
+			color: var(--neutral_10)
+
+			&:hover
+				color: var(--brand)
+
+
+	.log
+		position: relative
+		small
+			display: block			
+			color: var(--neutral_10)
+			font-weight: 600
+			font-size: 1rem
+			text-transform: uppercase
+			margin-bottom: 2rem
+			opacity: .5
+
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			gap: .75rem
+			border: solid 1px var(--neutral_20)
+			border-radius: .75rem
+			text-align: center
+			color: var(--neutral_10)
+			background-color: var(--neutral_90)
+			font-weight: 200
+			opacity: .7
+
+			&:hover
+				opacity: 1
+
+			&:first-of-type
+				height: 3rem
+				font-size: 2rem
+				margin-bottom: .5rem
+				i
+					background-color: var(--neutral_10)
+					width: 2rem
+					height: 2rem
+					mask-image: url("../img/icons/login.svg")
+					mask-size: 2rem 2rem
+
+			&:last-of-type
+				height: 2.5rem
+				font-size: 1.25rem
+				i
+					background-color: var(--neutral_10)
+					width: 1rem
+					height: 1rem
+					mask-image: url("../img/icons/arrow.svg")
+					mask-size: 1rem 1rem
+
+
+	.sign
+		position: relative
+		margin-top: 2rem
+		small
+			display: block			
+			color: var(--neutral_10)
+			font-weight: 600
+			font-size: 1rem
+			text-transform: uppercase
+			margin-bottom: 2rem
+			opacity: .5
+
+		a
+			padding: .3rem
+			background-color: var(--neutral_10)
+			border-radius: 3rem
+			font-size: 1.1rem
+			font-weight: 700
+			display: block
+			transition: transform .2s $ease
+
+			&:hover
+				transform: scale(1.05)
+				
+			span
+				height: 2.5rem
+				border-radius: 2.5rem
+				line-height: 2.5rem
+				display: block
+				text-align: center
+				padding: 0 1.25rem
+				border: solid .3rem var(--neutral_90)
+				background-color: var(--brand)
+				color: var(--neutral_90)
+				transition: background-color .2s $ease
+
+
+
+@include for-size(desk_sm)
+	.menu
+		transform: scale(0.9)
+		&.active
+			left: 7rem
+			&::before
+				transform: translate(-60%, -60%)
+
+
+@include for-size(tablet_lg)
+	.menu
+		left: -100%
+		top: 20rem
+		transform: scale(1.5)
+
+		&.active
+			&::before
+				transform: translate(-56%, -68%) scale(0.8)
+
+
+@include for-size(tablet_md)
+	.menu
+		left: -100%
+		top: 2rem
+		transform: scale(1)
+
+		&.active
+			left: 3rem
+			&::before
+				transform: translate(-56%, -58%) scale(0.8)
+
+
+@include for-size(phone)
+	.menu
+		left: -120%
+		top: 0
+		padding: 40vw 3.5rem 0
+		&.active
+			left: 0
+			&::before
+				transform: translate(-52%, -58%) scale(1)
+
+		.lang
+			a
+				font-size: 6vw
+		ul
+			margin: 6vw 0
+			a
+				font-size: 7vw
+				line-height: 10vw
+		.log
+			small
+				margin-bottom: 6vw
+		.sign
+			margin-top: 6vw
+
+

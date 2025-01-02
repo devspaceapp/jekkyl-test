@@ -1,0 +1,160 @@
+# PT
+---
+site:
+  title: Vega Checkout
+  description: Checkout de alta conversão para negócios digitais. Acesse grátis as ferramentas que você precisa para vender mais na internet.
+  lang: pt-br
+
+header:
+  sign: Comece grátis
+
+menu:
+  home: Início
+  about: Sobre
+  pricing: Planos
+  contact: Contato
+  log_title: Acesso
+  log: Entrar
+  legacy: Acessar sistema legado
+  sign_title: Nova conta
+  sign: Comece grátis
+
+home:
+  title: Vega Checkout
+  cover:
+    h1: Vega Checkout
+    h2: Os recursos que você precisa para <em>vender mais</em> na internet
+    radial: Conversão média acima de 90% •&nbsp;
+    start_now: Comece <b>grátis</b>, digite seu e-mail
+    login: Login
+    signup: Criar conta
+    bt_login: Entrar
+    bt_legacy: Sistema legado
+  audience:
+    a: Para vender <b>produtos físicos</b>
+    b: Para vender <b>produtos digitais</b>
+    c: Para vender <b>dropshipping</b>
+  about:
+    p1: Maximize suas vendas com uma experiência de
+    p2: compra única e de alta performance.
+    p3: Use o Vega na sua loja Shopify, Woo e outros apps
+    p4: de e-commerce.
+    info: Também integra com landing page e atende quem vende pelas redes sociais ;)
+  iframe_checkout:
+    bt1: Desktop
+    bt2: Mobile
+    bt3: Tela cheia
+    bt4: Minimizar
+    p: Checkout <mark>transparente</mark> customizado com a cara do seu negócio
+    p2: Não há nada que identifique o Vega no seu checkout ;)
+  checkout_itens:
+    h2: Explore os itens que ajudam a aumentar o seu ticket médio
+    item_1: 
+      title: Upsell one-click
+      sub: Ofertas pós venda
+    item_2:
+      title: Order Bump
+      sub: Ofertas pré venda
+    item_3:
+      title: Variantes de produto
+      sub: Seleção de modelos
+    item_4:
+      title: Controle de estoque
+      sub: Limite de itens disponíveis
+    item_5:
+      title: Banner/gif animado/video
+      sub: Imagem ou video promocional
+    item_6:
+      title: Cupom
+      sub: Desconto por código ou valor
+    item_7:
+      title: Letreiro
+      sub: Frase em destaque
+    item_8:
+      title: Contador de vendas
+      sub: Número de compradores
+    item_9:
+      title: Prova social
+      sub: Comentário de compradores
+    item_10:
+      title: Pagamento com 2 cartões
+      sub: Permite 2 cartões na compra
+    item_11:
+      title: Temporizador
+      sub: Cria urgência de compra
+    # item_12:
+    #   title: Internacionalização
+    #   sub: Pagamento em múltiplas moedas
+  recover:
+    marquee: Recupere em torno de 30% dos abandonos de carrinho
+    t1: Disparo <b>automático</b> de mensagens
+    t2: Seus clientes recebem <b>mensagens condicionais</b> configuradas por você
+    footer1: Via WhatsApp
+    footer2: Via E-mail
+    footer3: Via SMS
+  ab_test:
+    small: Teste A/B
+    em: Exclusivo
+    title1: Gateways
+    p1: Os <b>pagamentos no cartão</b>  são  direcionados automaticamente para o <b>gateway</b> com a melhor conversão do momento entre o seu público.
+    title2: PIX
+    p2: Personalize a experiência de pagamento no Pix com <b>modelos configuráveis</b>.
+    title3: Checkout
+    p3: Experimente <b>diferentes configurações</b> de checkout e deixe que o Vega apresente o melhor para seus compradores.
+  features:
+    title1: Relatório<br />completo
+    sub1: Acompanhe o desempenho das suas <b>vendas</b> e <b>marketing</b> com dados detalhados
+    title2: Gerencie múltiplos negócios
+    sub2: Com o Vega é possível acessar e administrar várias lojas online em uma única conta
+  integ:
+    title: O máximo de integrações
+    integ_1: Apps
+    sub_1: Recursos de e-commerce
+    integ_2: Gateways
+    sub_2: Intermediadores de pagamento
+    integ_3: Pixels
+    sub_3: Monitoramento de campanhas
+  plans:
+    title: Planos
+    plan1:
+      name: Basic
+      price_m: R$ 0
+      price_detail_m: Zero mensalidade
+      tax: <em>+ 2,5%</em> sobre transações
+    plan2:
+      name: Business
+      price_m: R$ 147
+      price_detail_m: /mês
+      tax: <em>+ 2%</em> sobre transações
+    plan3:
+      name: Professional
+      price_m: R$ 497
+      price_detail_m: /mês
+      tax: <em>+ 1,5%</em> sobre transações
+    benefit1: Customize o seu checkout
+    benefit2: Monitore suas vendas em tempo real
+    benefit3: Escale seu negócio na internet
+    cta: Comece agora
+    budget_p: <b>Personalizamos o seu plano</b> se o seu negócio  já está escalado
+    budget_cta: Solicite um orçamento
+  rewards:
+    p: Colecione placas exclusivas alcançando metas de faturamento
+  contact-title: Contato
+  contact1:
+    title: Suporte
+    phone: 800<hr>591<hr>8746
+    link: WhatsApp web
+    info: Dias úteis, 9h às 18h
+  contact2:
+    title: Comercial
+    phone: (11)<hr>3500<hr>7861
+    link: WhatsApp web
+    info: Dias úteis, 9h às 18h
+  contact3:
+    title: Ouvidoria
+    mail: ouvidoria@vegacheckout.com.br
+    link: Enviar e-mail
+    info: Manifeste opiniões, reclamações ou dúvidas.
+
+
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{% t 'site.lang' %}">
+
+	{% include head.html %}
+
+	<body>
+
+		<div class="app">
+			{% include header.html %}
+			{{ content }}
+			{% include menu.html %}
+			{% include footer.html %}
+		</div>
+
+	</body>
+
+</html>

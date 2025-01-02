@@ -1,0 +1,169 @@
+
+.preloader
+	width: calc(100vw - 3rem)
+	max-width: calc(1980px - 3rem)
+	height: calc(100vh - 3rem)
+	min-height: 780px
+	// border: dashed 1px var(--neutral_90)
+	background-color: var(--neutral_90)
+	border-radius: 4rem
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%) scale(1.1)
+	z-index: 10
+	overflow: hidden
+
+	&::after
+		content: ''
+		width: 0
+		height: 100%
+		border-left: dashed 1px var(--neutral_10)
+		position: absolute
+		top: 0
+		left: 50%
+		opacity: .3
+
+	.v
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 15rem
+		z-index: 1
+
+		path
+			fill: var(--neutral_10)
+			stroke: var(--neutral_90)
+
+		&::before,
+		&::after
+			content: ''
+			width: 0
+			height: 125rem
+			border-left: dashed 1px var(--neutral_10)
+			position: absolute
+			top: -58.1rem
+			left: 50%
+			opacity: .3
+		&::before
+			transform: rotate(60deg)
+		&::after
+			transform: rotate(-60deg)
+
+		svg
+			width: 100%
+			height: auto
+			position: relative
+			z-index: 1
+
+	.ellipse
+		z-index: 1
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) scale(.5)
+
+		path
+			stroke-width: 1
+			stroke-dasharray: 6
+			stroke: var(--neutral_10)
+			opacity: .3
+		.ball1_intro
+			fill: var(--neutral_10)
+
+	#progress-bar-container
+		width: 80%
+		border: dashed 1px var(--neutral_20)
+		position: absolute
+		bottom: 20%
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 1
+		text-align: center
+		box-sizing: border-box
+		padding: .5rem
+		border-radius: .5rem
+
+		#progress-bar
+			width: 0
+			height: .5rem
+			border-radius: 1rem
+			margin: 0 auto 0
+			background-color: var(--brand)
+			line-height: 6rem
+			color: var(--neutral_10)
+			font-size: 3rem
+
+
+
+body
+	overflow-y: hidden
+
+body.loaded
+	overflow-y: auto
+
+	.preloader
+		transition: opacity .5s $ease, z-index .1s .5s
+		opacity: 0
+		z-index: -10
+
+	.cover
+		transform: scale(1)
+		background-position: center 56%, center 0, center 101%
+		transition: transform 1s $ease, background-position 1.8s $ease .4s
+
+		.v
+			transform: translate(-50%, -110%)
+			transition: transform 2s $ease .3s
+
+		h1
+			transform: translateY(0)
+			opacity: 1
+			transition: transform 1.7s $ease .8s, opacity 1.7s $ease .8s
+		h2
+			transform: translateY(0)
+			opacity: 1
+			transition: transform 1.5s $ease 1.1s, opacity 1.5s $ease 1.1s
+		.radial
+			transform: scale(1)
+			opacity: 1
+			transition: transform 1s $ease 1s, opacity 1s $ease 1s
+
+	.access
+		transition: outline .1s, opacity 1s $ease 1.5s
+		opacity: 1
+
+
+
+@include for-size(tablet_lg)
+	body.loaded
+		.cover
+			.v
+				transform: translate(-50%, -160%) scale(1.5)
+
+
+@include for-size(tablet_md)
+	body.loaded
+		.cover
+			.v
+				transform: translate(-50%, -130%) scale(1.1)
+
+
+@include for-size(phone)
+	.preloader
+		width: calc(100vw - .5rem)
+		height: calc(100vh - .5rem)
+
+	body.loaded
+		.cover
+			width: calc(100vw - .5rem)
+			height: calc(100vh - .5rem)
+			.radial
+				transform: scale(0.7)
+			.v
+				transform: translate(-50%, -110%) scale(0.8)
+
+
+
+

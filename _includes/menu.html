@@ -1,0 +1,25 @@
+
+<nav class="menu">
+	<div class="lang">
+		<a href="{{ site.baseurl_root }}/" title="Português" class="bt_pt current">PT</a>
+		<a href="{{ site.baseurl_root }}/en" title="English" class="bt_en magic-hover">EN</a>
+	</div>
+
+	<ul>
+		<li><a href="#cover" class="magic-hover" title="{% t menu.home %}" onclick="closeMenu()">{% t menu.home %}</a></li>
+		<li><a href="#audience" class="magic-hover" title="{% t menu.about %}" onclick="closeMenu()">{% t menu.about %}</a></li>
+		<li><a href="#pricing" class="magic-hover" title="{% t menu.pricing %}" onclick="closeMenu()">{% t menu.pricing %}</a></li>
+		<li><a href="#contact" class="magic-hover" title="{% t menu.contact %}" onclick="closeMenu()">{% t menu.contact %}</a></li>
+	</ul>
+
+	<div class="log">
+		<small>{% t menu.log_title %}</small>
+		<a href="{{ site.login }}" class="magic-hover" target="_blank" title="{% t menu.log %}"><i></i>{% t menu.log %}</a>
+		<a href="{{ site.legacy }}" class="magic-hover" target="_blank" title="{% t menu.legacy %}">{% t menu.legacy %}<i></i></a>
+	</div>
+
+	<div class="sign">
+		<small>{% t menu.sign_title %}</small>
+		<a href="{{ site.signup }}" class="magic-hover" target="_blank" title="{% t menu.sign %}"><span>{% t menu.sign %}</span></a>
+	</div>
+</nav>

@@ -1,0 +1,177 @@
+
+.audience
+	position: relative
+	width: 100%
+	overflow: hidden
+
+	&::after
+		content: ''
+		width: 23.75rem
+		height: 17.5rem
+		background: url("../img/asteroid.svg") no-repeat center
+			size: contain
+		position: absolute
+		top: 40%
+		right: 0
+		z-index: -1
+		animation: asteroid 20s linear infinite
+
+	@keyframes asteroid
+		to
+			transform: rotate(-359deg)
+
+	ul
+		width: 100%
+		display: flex
+		gap: 2.5rem
+		justify-content: center
+		padding: 12.5rem 0
+
+
+	li
+		width: 12%
+		height: 42.5rem
+		outline: solid .35rem var(--neutral_90)
+		border-radius: 1.75rem
+		box-sizing: border-box
+		padding: .5rem
+		display: flex
+		flex-direction: column
+		gap: .5rem
+		background-color: var(--neutral_10)
+		position: relative
+		transition: width .5s $ease
+		
+		&.active
+			width: 40%
+			h2
+				opacity: 1
+			figure::after
+				opacity: 0
+
+		&:first-child
+			z-index: 2
+			figure
+				background-image: url("../img/produtos-fisicos.svg")
+		&:nth-child(2)
+			z-index: 2
+			figure
+				background-image: url("../img/produtos-digitais.svg")
+		&:nth-child(3)
+			z-index: 2
+			figure
+				background-image: url("../img/dropshipping.svg")
+
+	h2
+		font-size: min(2rem, 2vw)
+		font-weight: 500
+		width: 100%
+		line-height: 3.5rem
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+		padding: 0 1.5rem
+		box-sizing: border-box
+		opacity: 0
+		transition: opacity .5s $ease
+
+	b
+		font-weight: 700
+
+	figure
+		display: block
+		width: 100%
+		flex: 1 1 auto
+		border-radius: 1.5rem
+		position: relative
+		background:
+			repeat: no-repeat
+			size: cover
+			color: var(--brand_light)
+			position: center
+
+		&::after
+			content: ''
+			width: 4.5rem
+			height: 4.5rem
+			border-radius: 4.5rem
+			background: url("../img/icons/hand-pointer.svg") no-repeat center var(--brand)
+				size: 70% auto
+			outline: solid .4rem var(--neutral_10)
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 1
+			transition: opacity .2s $ease
+
+	.ellipse
+		z-index: 1
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) scale(.9)
+
+
+
+@include for-size(desk_sm)
+	.audience
+		li
+			height: 36rem
+		.ellipse
+			transform: translate(-50%, -50%) scale(0.8)
+
+
+@include for-size(tablet_lg)
+	.audience
+		ul
+			gap: 1.5rem
+		li
+			height: 42.5rem
+			&.active
+				width: 60%
+		h2
+			font-size: 3.2vw
+		.ellipse
+			transform: translate(-50%, -50%) scale(0.9)
+
+
+@include for-size(tablet_md)
+	.audience
+		li
+			height: 34rem
+		.ellipse
+			transform: translate(-50%, -50%) scale(0.7)
+
+
+@include for-size(phone)
+	.audience
+		ul
+			flex-wrap: wrap
+			padding: 12.5rem 1rem
+			box-sizing: border-box
+		li
+			width: 100%
+			height: 30rem
+			max-height: 4.5rem
+			overflow: hidden
+			justify-content: center
+			gap: 0
+			transition: max-height .5s $ease
+			&.active
+				width: 100%
+				max-height: 30rem
+				gap: .5rem
+				figure
+					flex: 1 1 auto
+		h2
+			font-size: 5vw
+		figure
+			flex: 1 1 60rem
+			&::after
+				width: 6rem
+				height: 6rem
+				top: 50%
+
+
+

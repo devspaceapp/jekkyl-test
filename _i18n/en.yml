@@ -1,0 +1,159 @@
+# EN
+---
+site:
+  title: Vega Checkout
+  description: High-conversion checkout for digital businesses. Free access to the tools you need to sell more online.
+  lang: en
+
+header:
+  sign: Sign up for free
+
+menu:
+  home: Home
+  about: About
+  pricing: Plans
+  contact: Contact
+  log_title: Access
+  log: Login
+  legacy: Access legacy system
+  sign_title: New account
+  sign: Sign up for free
+
+home:
+  title: Vega Checkout
+  cover:
+    h1: Vega Checkout
+    h2: The resources you need to <em>sell more</em> online
+    radial: Average conversion above 90% •&nbsp;
+    start_now: Start <b>for free</b>, enter your e-mail
+    login: Login
+    signup: Create account
+    bt_login: Enter
+    bt_legacy: Legacy system
+  audience:
+    a: To sell <b>physical products</b>
+    b: To sell <b>digital products</b>
+    c: To sell <b>dropshipping</b>
+  about:
+    p1: Maximize your sales with a unique, 
+    p2: high-performance shopping experience.
+    p3: Use Vega on your Shopify store, Woo, and other 
+    p4: e-commerce apps.
+    info: It also integrates with a landing page and serves those who sell through social media ;)
+  iframe_checkout:
+    bt1: Desktop
+    bt2: Mobile
+    bt3: Fullscreen
+    b4: Minimize
+    p: <mark>Transparent</mark> checkout customized to your business's face
+    p2: There is nothing that identifies Vega in your checkout ;)
+  checkout_itens:
+    h2: Explore items that help increase your average ticket
+    item_1: 
+      title: Upsell one-click
+      sub: After-sales offers
+    item_2:
+      title: Order Bump
+      sub: Pre-sales offers
+    item_3:
+      title: Product variant
+      sub: Model selection
+    item_4:
+      title: Inventory control
+      sub: Limit of available items
+    item_5:
+      title: Banner/animated gif/video
+      sub: Promotional image or video
+    item_6:
+      title: Cupom
+      sub: Discount by code or value
+    item_7:
+      title: Placard
+      sub: Featured phrase
+    item_8:
+      title: Sales counter
+      sub: Number of buyers
+    item_9:
+      title: Social proof
+      sub: Buyers reviews
+    item_10:
+      title: Payment with 2 credit cards
+      sub: Purchases with 2 credit cards
+    item_11:
+      title: Timer
+      sub: Create purchase urgency
+    # item_12:
+    #   title: Internationalization
+    #   sub: Payment in multiple currencies
+  recover:
+    marquee: Recover around 30% of abandoned carts
+    t1: <b>Automatic</b> message triggering
+    t2: Your customers receive <b>conditional messages</b> configured by you
+    footer1: By WhatsApp
+    footer2: By E-mail
+    footer3: By SMS
+  ab_test:
+    small: A/B test
+    em: Exclusive
+    title1: Gateways
+    p1: <b>Credit card payments</b> are automatically directed to the <b>payment gateway</b> with the best conversion at the moment among your audience.
+    title2: PIX
+    p2: Personalize the Pix payment experience with <b>configurable templates</b>.
+    title3: Checkout
+    p3: Try <b>different checkout configurations</b> and let Vega present the best to your shoppers.
+  features:
+    title1: Full<br />report
+    sub1: Track your <b>sales</b> and <b>marketing</b> performance with detailed data
+    title2: Manage multiple businesses
+    sub2: With Vega you can access and manage multiple online stores from a single account
+  integ:
+    title: Maximum integrations
+    integ_1: Apps
+    sub_1: E-commerce resources
+    integ_2: Gateways
+    sub_2: Payment intermediaries
+    integ_3: Pixels
+    sub_3: Campaign monitoring
+  plans:
+    title: Plans
+    plan1:
+      name: Basic
+      price_m: R$ 0
+      price_detail_m: Zero monthly fee
+      tax: <em>+ 2,5%</em> transaction fee
+    plan2:
+      name: Business
+      price_m: R$ 147
+      price_detail_m: /month
+      tax: <em>+ 2%</em> transaction fee
+    plan3:
+      name: Professional
+      price_m: R$ 497
+      price_detail_m: /month
+      tax: <em>+ 1,5%</em> transaction fee
+    benefit1: Customize your checkout
+    benefit2: Monitor your sales in real time
+    benefit3: Scale your business on the internet
+    cta: Start now
+    budget_p: <b>We customize your plan</b> if your business is already scaled
+    budget_cta: Request a quote
+  rewards:
+    p: Collect unique plaques by reaching revenue goals
+  contact-title: Get in touch
+  contact1:
+    title: Support
+    phone: +55<hr>800<hr>591<hr>8746
+    link: WhatsApp web
+    info: Weekdays, 9am to 6pm
+  contact2:
+    title: Commercial
+    phone: +55<hr>11<hr>3500<hr>7861
+    link: WhatsApp web
+    info: Weekdays, 9am to 6pm
+  contact3:
+    title: Ombudsman
+    mail: ouvidoria@vegacheckout.com.br
+    link: Send e-mail
+    info: Express opinions, complaints or doubts.
+
+

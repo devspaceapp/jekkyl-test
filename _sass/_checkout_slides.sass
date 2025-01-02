@@ -1,0 +1,55 @@
+
+.checkout_slides
+	width: 100vw
+	box-sizing: border-box
+	overflow-x: hidden
+
+	ul
+		display: flex
+		gap: 1.25rem
+
+		&:first-child
+			margin-bottom: 1.25rem
+			transform: translateX(50vw)
+
+		&:last-child
+			transform: translateX(-100%)
+
+	li
+		flex: 0 0 46.25rem
+		height: 30rem
+		background:
+			color: #d1c3aa
+			repeat: no-repeat
+			position: center top
+			size: auto 100%
+		border-radius: 1.25rem
+		// border: solid .25rem var(--neutral_90)
+
+
+		$checkout-models: electronic moka next gameover imagine bycicle
+		@each $model in $checkout-models
+			&.#{$model}
+				background-image: url("../img/checkout-models/#{$model}.webp")
+
+
+@include for-size(desk_sm)
+	.checkout_slides
+		li
+			flex: 0 0 38rem
+			height: 25rem
+
+
+@include for-size(tablet_md)
+	.checkout_slides
+		li
+			flex: 0 0 30.25rem
+			height: 20rem
+
+
+@include for-size(phone)
+	.checkout_slides
+		li
+			flex: 0 0 27.5rem
+			height: 18rem
+

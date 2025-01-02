@@ -1,0 +1,111 @@
+
+.about
+	position: relative
+
+	& > p
+		color: var(--neutral_20)
+		font-weight: 500
+		font-size: min(3.5vw, 4.5rem)
+		margin-left: 6rem
+		margin-right: 6rem
+		line-height: 1.5
+		transition: color .5s $ease
+
+		&:nth-of-type(2)
+			margin-bottom: 3rem
+
+		&.active
+			color: var(--neutral_90)
+
+	.planet
+		width: 16.25rem
+		height: 16.25rem
+		background: url("../img/planet.svg") no-repeat
+			size: contain
+		position: absolute
+		top: -20%
+		left: 10%
+		z-index: -1
+
+	.cometa
+		width: 30.625rem
+		height: 5rem
+		background: url("../img/cometa.svg") no-repeat
+			size: contain
+		position: absolute
+		top: -50%
+		right: -80%
+		transform: rotate(-15deg)
+		z-index: -1
+
+	footer
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		gap: .75rem
+		padding: 0 6rem 6rem
+
+		button
+			@extend %hint_button
+			
+
+
+		span
+			display: block
+			border: solid .188rem var(--neutral_90)
+			border-radius: .75rem
+			height: 5rem
+			background:
+				repeat: no-repeat
+				position: center
+
+			&:first-of-type
+				width: 12.5rem
+				background-image: url("../img/apps/shopify.svg")
+				background-size: 85% auto
+			&:last-of-type
+				width: 10rem
+				background-image: url("../img/apps/woo.svg")
+				background-size: auto 80%
+
+
+@include for-size(tablet_lg)
+	.about
+		padding: 0 4rem
+		& > p
+			font-size: 6vw
+			display: inline
+			margin-left: 0
+			margin-right: 0
+		footer
+			padding: 4rem 0
+			justify-content: flex-start
+			button
+				p
+					width: 70vw
+					font-size: 4vw
+					line-height: 4.5vw
+					bottom: 0
+					left: 0
+					transform: initial
+
+
+@include for-size(phone)
+	.about
+		padding: 0 2rem
+		& > p
+			font-size: 7.5vw
+		.cometa
+			top: 30%
+			right: -120%
+		footer
+			span
+				height: 3rem
+				&::first-of-type
+					width: 8
+			button
+				p
+					width: 60vw
+					font-size: 5.5vw
+					line-height: 6.5vw
+

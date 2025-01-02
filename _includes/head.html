@@ -1,0 +1,32 @@
+<head>
+
+  <meta charset="utf-8">
+  <title>Vega Checkout</title>
+
+  <meta name="author" content="Vega Checkout">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/img/favicon.png" sizes="16x16"> -->
+	<link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl_root }}">
+
+<!--   <meta property="og:title" content="Vega Checkout">
+  <meta property="og:description" content="{% t 'site.description' %}">
+  <meta property="og:image" content="/img/social.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property='og:url' content="/">
+
+  <meta name="twitter:title" content="Vega Checkout">
+  <meta name="twitter:description" content="{% t 'site.description' %}">
+  <meta name="twitter:image" content="/img/social.jpg">
+  <meta name="twitter:card" content="summary_large_image"> -->
+
+  <!-- <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}"> -->
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  {% for language in page.languages %}
+    <link rel="alternate" hreflang="{{ language }}" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace_first: page.language, language }}" />
+  {% endfor %}
+
+</head>

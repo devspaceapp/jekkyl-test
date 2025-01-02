@@ -1,0 +1,214 @@
+
+// color themes
+:root
+  --brand: #FFB727
+  --brand_light: #FFD98E
+
+  --neutral_0: #FFFFFF
+  --neutral_10: #EFE3CD
+  --neutral_20: #DCD1BD
+
+  --neutral_90: #2C2C2C
+  --neutral_100: #000000
+
+  --links: #3F83AE
+
+  --opacity_2: rgba(0,0,0,0.02)
+  --opacity_10: rgba(0,0,0,0.1)
+  --opacity_20: rgba(0,0,0,0.2)
+
+
+
+
+$ease: cubic-bezier(0.5,0,0,1)
+
+// resets
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas
+  margin:     0
+  padding:    0
+  border:     0
+  outline:     none
+
+html, body
+  min-height:               100%
+  -ms-text-size-adjust:     100%
+  -webkit-text-size-adjust: 100%
+  outline:                  none
+
+body, input, textarea, button
+  font:                     1rem "Clash Display"
+  font-weight:              400
+  -webkit-font-smoothing:   antialiased
+  color:                    var(--neutral_90)
+
+body
+  overflow-x:               hidden
+  background-color:         var(--neutral_10)
+
+a
+  text-decoration:          none
+ul, ol, dl
+  list-style:               none
+button
+  padding:                  0
+  border:                   0
+  background:               transparent
+
+img
+  display:                  block
+em
+  font-style:               normal
+
+
+// selection
+::selection
+  background:       var(--brand)
+  color:            var(--neutral_100)
+  text-shadow:      none
+
+
+// placeholder
+::-webkit-input-placeholder
+  color: var(--brand)
+::-moz-placeholder
+  color: var(--brand)
+\:-moz-placeholder
+  color: var(--brand)
+\:-ms-input-placeholder
+  color: var(--brand)
+
+
+// scrollbars webkit
+::-webkit-scrollbar
+  width: .75rem
+  background-color: transparent
+  
+::-webkit-scrollbar-track
+  border-radius: .25rem
+
+::-webkit-scrollbar-thumb
+  border-radius: .5rem
+  background-color: var(--neutral_90)
+  border-right: solid .25rem var(--neutral_10)
+  -webkit-background-clip: content-box
+  
+// ::-webkit-scrollbar-thumb:window-inactive
+//   background: var(--neutral_20)
+//   border: solid 1px red
+
+::-webkit-scrollbar-button:start,
+::-webkit-scrollbar-button:end
+  height: 1.5rem
+
+
+
+%clear
+  &:after
+    height:             0
+    clear:              both
+    content:            "."
+    display:            block
+    font-size:          0
+    visibility:         hidden
+    position:           initial
+
+
+
+// Desktop first media queries
+@mixin for-size($size)
+  @if $size == phone
+    @media (max-width: 40rem)
+      @content
+  @else if $size == tablet_md
+    @media (max-width: 48rem)
+      @content
+  @else if $size == tablet_lg
+    @media (max-width: 64rem) and (orientation:portrait)
+      @content
+  @else if $size == desk_sm
+    @media (max-width: 1280px)
+      @content
+  @else if $size == desk_md
+    @media (max-width: 1536px)
+      @content
+
+
+$column_tablet_md: 48rem
+$column_tablet_lg: 64rem
+$column_desk_sm: 80rem
+$column_desk_md: 96rem
+$column_desk_lg: 123.75rem
+
+
+
+%input_focus
+  outline:
+    width: .25rem
+    style: solid
+    color: transparent
+    offset: -.25rem
+  &:hover
+    outline-color: black
+  &:focus
+    outline-color: #FFE2A9
+
+
+.app
+  width: 100%
+  height: inherit
+  max-width: $column_desk_lg
+  margin: 0 auto
+  padding-bottom: 10rem
+  background: url("../img/footer-ground.svg") no-repeat center 101%
+    size: min(95vw, 1900px)
+  overflow-x: hidden
+
+@include for-size(tablet_lg)
+  .app
+    background-size: 220vw
+@include for-size(phone)
+  .app
+    background-size: 400vw
+
+
+.main
+  width: 100%
+  position: relative
+
+%hint_button
+  width: 2.5rem
+  height: 2.5rem
+  background: url("../img/icons/info.svg") no-repeat center var(--brand_light)
+    size: 2rem auto
+  border-radius: 100%
+  transition: transform .3s $ease
+  position: relative
+
+  &:hover
+    transform: scale(1.05)
+    p
+      opacity: 1
+      visibility: visible
+
+  p
+    width: 30rem
+    background-color: var(--brand_light)
+    border: solid .625rem var(--neutral_10)
+    outline: solid .375rem var(--neutral_100)
+    border-radius: 1.25rem
+    padding: 0 1.25rem
+    font-size: 1.75rem
+    line-height: 2.5rem
+    color: var(--neutral_100)
+    text-align: left
+    font-family: "Clash Display"
+    font-weight: 600
+    position: absolute
+    bottom: 3rem
+    left: 50%
+    transform: translateX(-50%)
+    opacity: 0
+    visibility: hidden
+    transition: opacity .3s $ease
+
+

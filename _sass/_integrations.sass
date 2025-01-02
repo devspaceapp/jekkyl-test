@@ -1,0 +1,186 @@
+
+.integrations
+	padding: 15rem 1.25rem
+	position: relative
+	background: url("../img/shine.svg") no-repeat center
+		size: auto 100%
+	margin-top: -14rem
+
+	h2
+		color: var(--neutral_90)
+		font-weight: 500
+		font-size: 4vw
+		margin: 0 6rem 3rem 6rem
+
+	article
+		border-bottom: solid 1px var(--neutral_90)
+		max-height: 8rem
+		overflow: hidden
+		transition: max-height .4s $ease
+		background-color: var(--neutral_10)
+
+		&:first-of-type
+			border-top: solid 1px var(--neutral_90)
+		&.active
+			max-height: 26.75rem
+			hgroup::after
+				animation: blink .2s linear infinite
+
+	hgroup
+		height: 8rem
+		padding: 0 4.5rem
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+
+		&::before
+			content: ''
+			width: 2.5rem
+			height: 2.5rem
+			background: url("../img/icons/focus.svg") no-repeat right center
+				size: contain
+			position: absolute
+			top: 50%
+			right: 4.5rem
+			transform: translateY(-50%)
+
+		&::after
+			content: ''
+			width: .9rem
+			height: .9rem
+			background-color: var(--brand)
+			border-radius: 100%
+			position: absolute
+			top: 50%
+			right: 5.3rem
+			transform: translateY(-50%)
+			opacity: 0
+
+		@keyframes blink
+			0%
+				opacity: 0
+			50%
+				opacity: 0
+			100%
+				opacity: 1
+
+		&:hover::after
+			opacity: 1
+			transition: opacity .3s $ease
+
+	h3
+		font-weight: 500
+		font-size: 2.5vw
+		text-transform: uppercase
+		letter-spacing: .25rem
+
+	h4
+		font-weight: 400
+		font-size: 1.5vw
+		margin-right: 5rem
+
+	.wrapper
+		height: 18.75rem
+		width: 100%
+		position: relative
+		display: flex
+		align-items: center
+		overflow-x: auto
+
+		&::-webkit-scrollbar-thumb
+			border-right: none
+			border-bottom: solid .25rem var(--neutral_10)
+			background-color: var(--neutral_20)
+
+	.box
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		width: 18.75rem
+		margin: 0
+		padding: 0
+		position: relative
+		flex-shrink: 0
+		color: black
+		font-size: 21px
+
+		&::after
+			content: ''
+			width: 1px
+			height: 70%
+			background-color: var(--neutral_90)
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+
+		&::before
+			content: ''
+			width: 65%
+			height: 35%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background:
+				repeat: no-repeat
+				size: contain
+				position: 50% 50%
+				color: var(--neutral_10)
+				blend-mode: darken
+
+
+	.aplicativos
+		$aplicativos: shopify woo activecampaign notazz astron hotzapp
+		@each $app in $aplicativos
+			.#{$app}::before
+				background-image: url("../img/integracoes/apps/#{$app}.webp")
+	.gateways
+		$gateways_list: appmax getnet iugu asaas mercado_pago pagarme abmex zoutipay melldin aktapay arkama ativopay avizz beehive cashtime cielo dompagamentos fastpay fenyxpay horizonbank nextionpay skypayments vibecash eskypay simplles bs-pay villetpay sttarpay
+		@each $gateway in $gateways_list
+			.#{$gateway}::before
+				background-image: url("../img/integracoes/gateways/#{$gateway}.webp")
+	.pixel
+		$pixel_list: facebook google analytics tiktok pinterest kwai taboola uol_ads outbrain
+		@each $pixel in $pixel_list
+			.#{$pixel}::before
+				background-image: url("../img/integracoes/pixel/#{$pixel}.webp")
+
+
+@include for-size(tablet_md)
+	.integrations
+		padding: 15rem .5rem
+		h2
+			margin: 0 0 3rem 4rem
+
+@include for-size(phone)
+	.integrations
+		padding: 15rem .5rem
+		h2
+			font-size: 8vw
+			margin: 0 0 2rem
+			text-align: center
+		hgroup
+			padding: 0 1.5rem
+			height: 5rem
+			&::before
+				right: 1.5rem
+			&::after
+				right: 2.35rem
+		article
+			max-height: 5rem
+		h3
+			font-size: 4vw
+		h4
+			font-size: 2.5vw
+			margin-right: 3rem
+			text-align: right
+		.wrapper
+			height: 10rem
+		.box
+			width: 8rem
+
+
+
