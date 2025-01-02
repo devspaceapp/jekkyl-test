@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 
-baseurl: "/jekkyl-test"
+baseurl: ""
 # baseurl: "/landing_vega_2025"
 url: "https://devspaceapp.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
