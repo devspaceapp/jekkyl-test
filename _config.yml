@@ -19,9 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 
-baseurl: ""
+baseurl: "/jekkyl-test"
 # baseurl: "/landing_vega_2025"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://devspaceapp.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Import SASS partials from sass_dir
